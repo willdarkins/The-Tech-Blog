@@ -51,6 +51,25 @@ router.post('/', (req, res) => {
     });
 });
 
+// POST /api/login - Login route to verify user identity
+router.post('/login', (req, res) => {
+    User.findOne({
+      where: {
+        email: req.body.email
+      }
+    }).then(dbUserData => {
+      if (!dbUserData) {
+        res.status(400).json({ message: 'No user with that email address!' });
+        return;
+      }
+  
+      // res.json({ user: dbUserData });
+  
+      // Verify user
+  
+    });  
+  });
+
 // PUT /api/users/1 - Update user info by id
 router.put('/:id', (req, res) => {
   User.update(req.body, {
