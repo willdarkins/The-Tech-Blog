@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/willdarkins/darkins_tech-blog_wk14/issues"
   },
-  "homepage": "https://github.com/willdarkins/darkins_tech-blog_wk14#readme"
+  "homepage": "https://github.com/willdarkins/darkins_tech-blog_wk14#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.3.2",
+    "sequelize": "^6.9.0"
+  }
 }
