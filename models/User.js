@@ -1,6 +1,8 @@
 //Imported Model class and Datatypes from Sequelize
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+//Imported bcrypt dependency
+const bcrypt = require('bcrypt');
 
 class User extends Model {}
 
@@ -34,6 +36,14 @@ User.init(
       }
     },
     {
+      hooks: {
+          // set up beforeCreate lifecycle "hook" functionality
+  beforeCreate(userData) {
+    return bcrypt.hash(userData.password, 10).then(newUserData => {
+      return newUserData
+    });
+  }
+      },
       sequelize,
       timestamps: false,
       freezeTableName: true,
