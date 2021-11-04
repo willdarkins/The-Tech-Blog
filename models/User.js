@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 
 class User extends Model {}
 
-// Initialize model's data and configuration columns
+// Initialize model's data and configuration columns to set rules
 User.init(
     {
       id: {
