@@ -24,7 +24,6 @@ router.get('/:id', (req, res) => {
         model: Post,
         attributes: ['id', 'title', 'post_url', 'created_at']
       },
-      // include the Comment model here:
       {
         model: Comment,
         attributes: ['id', 'comment_text', 'created_at'],
@@ -93,11 +92,10 @@ router.post('/login', (req, res) => {
     }
 
     req.session.save(() => {
-      // declare session variables
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
-
+  
       res.json({ user: dbUserData, message: 'You are now logged in!' });
     });
   });
@@ -105,6 +103,7 @@ router.post('/login', (req, res) => {
 
 //POST to destroy session, essentially logging out
 router.post('/logout', (req, res) => {
+  console.log('Logout route is running')
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
