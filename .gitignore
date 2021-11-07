@@ -1,3 +1,8 @@
 node_modules
 .DS_Store
 .env
+routes/index.js
+routes/api/comment-routes.js
+routes/api/index.js
+routes/api/post-routes.js
+routes/api/user-routes.js
