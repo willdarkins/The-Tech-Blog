@@ -103,6 +103,18 @@ router.post('/login', (req, res) => {
   });
 });
 
+//POST to destroy session, essentially logging out
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
+  }
+});
+
 // PUT /api/users/1 - Update user info by id
 router.put('/:id', (req, res) => {
   User.update(req.body, {
@@ -142,18 +154,6 @@ router.delete('/:id', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-});
-
-//POST to destroy session, essentially logging out
-router.post('/logout', (req, res) => {
-  if (req.session.loggedIn) {
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
-  }
-  else {
-    res.status(404).end();
-  }
 });
 
 module.exports = router;
