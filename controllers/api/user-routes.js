@@ -4,8 +4,9 @@ const { User, Post, Vote, Comment } = require("../../models");
 // GET /api/users - Get all users
 router.get('/', (req, res) => {
   User.findAll({
+    attributes: { exclude: ['password'] }
   })
-    .then(UserData => res.json(UserData))
+    .then(dbUserData => res.json(dbUserData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
@@ -70,6 +71,10 @@ router.post('/', (req, res) => {
       res.json(dbUserData);
     });
   })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 // POST /api/login - Login route to verify user identity
@@ -103,7 +108,6 @@ router.post('/login', (req, res) => {
 
 //POST to destroy session, essentially logging out
 router.post('/logout', (req, res) => {
-  console.log('Logout route is running')
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
