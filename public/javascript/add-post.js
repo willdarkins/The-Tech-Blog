@@ -1,3 +1,4 @@
+//Sends user post information to database to be displayed in post routes
 async function newFormHandler(event) {
     event.preventDefault();
   
