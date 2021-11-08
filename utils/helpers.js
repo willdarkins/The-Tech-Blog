@@ -1,5 +1,5 @@
-// Makes dates more readable for each post
 module.exports = {
+// Makes dates more readable for each post
     format_date: date => {
         return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(
             date
