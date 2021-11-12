@@ -26,6 +26,10 @@ h1 {
   margin: 1%;
 }
 
+#post-submit-btn {
+  margin-top: .5%;
+}
+
 /* .container-fluid {
   display: inline-flex;
   flex-wrap: wrap;
@@ -43,31 +47,36 @@ body, html {
 
 a {
   text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: color .1s;
+  color: inherit;
 }
 
-a:link { 
-  text-decoration: none; 
+a:link {
+  text-decoration: none;
+  color: inherit;
 }
-
 
 a:visited {
   text-decoration: none;
+  color: inherit;
 }
 
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
 
 a:hover {
   text-decoration: none;
+  color: white;
 }
-
 
 a:active {
   text-decoration: none;
+  color: inherit;
 }
 
 .post-list {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
