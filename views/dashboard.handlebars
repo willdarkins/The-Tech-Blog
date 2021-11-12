@@ -1,6 +1,23 @@
 <section>
-  <h2>Create New Post</h2>
+<form class="new-post-form">
+  <div class="card">
+    <h5 class="card-header">Create New Post</h5>
+    <div class="content-form">
+      <div class="mb-3">
+        <label for="post-title" class="form-label">Title</label>
+        <input id="post-title" type="text" class="form-control" name="post-title">
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" id="post-url" name="post-url" rows="6"></textarea>
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
 
+  {{!-- <h2>Create New Post</h2>
   <form class="new-post-form">
     <div>
       <label for="post-title">Title</label>
@@ -11,7 +28,7 @@
       <input id="post-url" name="post-url" />
     </div>
     <button type="submit" class="btn">Create</button>
-  </form>
+  </form> --}}
 </section>
 {{#if posts.length}}
 <section>
@@ -20,7 +37,7 @@
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      <button type="button" class="btn btn-primary btn-sm"><a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a></button>
     </li>
     {{/each}}
   </ol>

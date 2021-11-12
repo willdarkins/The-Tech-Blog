@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
   Post.findAll({
     attributes: [
       'id',
-      'post_url',
+      'content',
       'title',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        attributes: ['id', 'comment', 'post_id', 'content', 'created_at'],
         include: {
           model: User,
           attributes: ['username']
@@ -52,6 +52,16 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+//GET route to display signup information
+router.get('/signup', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('signup');
+});
+
 //GET and display single post information via searched id
 router.get('/post/:id', (req, res) => {
   Post.findOne({
@@ -60,7 +70,7 @@ router.get('/post/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'post_url',
+      'content',
       'title',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -68,7 +78,7 @@ router.get('/post/:id', (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        attributes: ['id', 'comment', 'post_id', 'user_id', 'created_at'],
         include: {
           model: User,
           attributes: ['username']

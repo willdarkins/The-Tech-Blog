@@ -1,11 +1,46 @@
 {{!-- Partial to post individual post with user name and date creation info --}}
-<article class="post">
+{{!-- <article class="post">
   <div class="title">
-    <a href="{{post_url}}" target="_blank">{{title}}</a>
+    <a href="{{post_content}}" target="_blank">{{title}}</a>
     <span>({{format_url post_url}})</span>
   </div>
   <div class="meta">
     {{vote_count}} point(s) by {{user.username}} on {{format_date created_at}}
     <a href="/post/{{id}}">{{format_plural "comment" comments.length}}</a>
   </div>
+</article> --}}
+
+<article class="post">
+<div class="card border-success mb-3" style="max-width: 18rem;">
+  <div class="card-header bg-transparent"><h5 class="card-title">{{title}}</h5></div>
+  <div class="card-body">
+    <p class="card-text">{{content}}</p>
+  </div>
+  <div class="card-footer bg-transparent">{{vote_count}} point(s) by {{user.username}} on {{format_date created_at}}
+    <a href="/post/{{id}}">{{format_plural "comment" comments.length}}</a></div>
+</div>
 </article>
+
+
+{{!-- <div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h5 class="card-title"><a href="{{post_url}}"target="_blank">{{title}}</a></h5> 
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div> --}}
+
+
+
+{{!-- <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><a href="{{post_url}}"target="_blank">{{title}}</a></h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+  </div>
+  <div class="card-footer bg-transparent border-success">
+      <div class="meta">
+    {{vote_count}} point(s) by {{user.username}} on {{format_date created_at}}
+    <a href="/post/{{id}}">{{format_plural "comment" comments.length}}</a>
+  </div>
+  </div>
+</div> --}}
