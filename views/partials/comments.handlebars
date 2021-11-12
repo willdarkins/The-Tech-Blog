@@ -1,13 +1,23 @@
 {{!-- Individual comments populated onto page using #each method --}}
-<div class="comment">
   {{#each this}}
-  <section class="comment">
+
+<div class="card">
+  <div class="card-header">
+    {{user.username}} on {{format_date created_at}}
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p class="card-text">{{comment_text}}}</p>
+    </blockquote>
+  </div>
+</div>
+
+  {{!-- <section class="comment">
     <div class="meta">
       {{user.username}} on {{format_date created_at}}
     </div>
     <div class="text">
-      {{comment}}
+      {{comment_text}}}
     </div>
-  </section>
+  </section> --}}
   {{/each}}
-</div>
