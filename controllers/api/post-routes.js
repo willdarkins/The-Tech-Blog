@@ -94,8 +94,6 @@ router.post('/', withAuth, (req, res) => {
   }
 });
 
-
-
 // upvote posts
 router.put('/upvote', withAuth, (req, res) => {
   // make sure the session exists first

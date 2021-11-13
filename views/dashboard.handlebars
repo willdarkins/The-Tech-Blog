@@ -1,7 +1,7 @@
 <section>
 <form class="new-post-form">
   <div class="card shadow p-3 mb-5">
-    <h5 class="card-header">Create New Post</h5>
+    <h5 class="card-header">✍️ Create New Post</h5>
     <div class="content-form">
       <div class="mb-3">
         <label for="post-title" class="form-label">Title:</label>
@@ -26,7 +26,7 @@
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
-      <button type="submit" class="btn btn-primary btn-sm"><a href="/edit/{{post.id}}" class="edit-link">Edit post</a></button>
+      <button type="submit" id="edit-btn" class="btn btn-primary btn-sm"><a href="/dashboard/edit/{{post.id}}">Edit post</a></button>
     </li>
     {{/each}}
   </ol>
