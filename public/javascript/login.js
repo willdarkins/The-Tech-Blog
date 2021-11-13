@@ -49,5 +49,3 @@ async function signupFormHandler(event) {
 }
 
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
-
-document.querySelector('#signup-btn').addEventListener('submit', signupFormHandler);
