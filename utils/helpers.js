@@ -10,16 +10,6 @@ module.exports = {
         if (amount !== 1) {
             return `${word}s`;
         }
-
         return word;
-    },
-//Formats urls with clean read - Deletes domains
-    format_url: url => {
-        return url
-        .replace('http://', '')
-        .replace('https://', '')
-        .replace('www.', '')
-        .split('/')[0]
-        .split('?')[0];
-      },
+    }
 }

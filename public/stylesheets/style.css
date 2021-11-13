@@ -30,6 +30,11 @@ h1 {
   margin-top: .5%;
 }
 
+#text-box-content {
+  height: 200px;
+  width: 1200px;
+}
+
 /* .container-fluid {
   display: inline-flex;
   flex-wrap: wrap;
