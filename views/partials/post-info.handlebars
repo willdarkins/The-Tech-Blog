@@ -6,9 +6,8 @@
   </div>
   <div class="card-footer bg-secondary text-white">
     by {{user.username}} on {{format_date created_at}}</br>
-    {{vote_count}} point(s)
-      <a href="/post/{{id}}">{{format_plural "comment" comments.length}}</a>
+    {{vote_count}} {{format_plural "point" vote_count}}
+      <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
     </div>
 </div>
 </article>
-<script src="/javascript/add-post.js"></script>
