@@ -2,19 +2,19 @@
   <h2>
     Edit Post
   </h2>
-  <form class="edit-post-form">
+  <form id="edit-btn">
 <div class="card">
   <div class="card-body">
      <h5 class="card-title"> <input name="post-title" type="text" value="{{post.title}}"x/></h5>
       </div>
       <div class="card-body">
-        <textarea class="visible-xs" rows="6" id="text-box-content" name="post-title" type="text" style="min-width: 100%">{{post.content}}</textarea>
+        <textarea class="visible-xs" rows="6" id="text-box-content" name="post-url" type="text" style="min-width: 100%">{{post.content}}</textarea>
       </div>
   </div>
 </div>
-  </form>
-  <button class="btn btn-success" type="submit">Save post</button>
+  <button  class="btn btn-success" type="submit">Save post</button>
   <button type="button" id="delete-post-btn" class="btn btn-danger">Delete post</button>
+  </form>
 </article>
 
 <script src="/javascript/edit-post.js"></script>
