@@ -1,8 +1,8 @@
 //Collecting and exporting controller data
-const User = require("./User");
-const Post = require("./Post");
-const Vote = require('./Vote');
-const Comment = require('./Comment');
+const User = require("./user");
+const Post = require("./post");
+const Vote = require('./vote');
+const Comment = require('./comment');
 
 //Defining model associations
 User.hasMany(Post, {
