@@ -5,7 +5,8 @@
   <form id="edit-btn">
 <div class="card">
   <div class="card-body">
-     <h5 class="card-title"> <input name="post-title" type="text" value="{{post.title}}"x/></h5>
+     {{!-- <h5 class="card-title"> <input name="post-title" type="text" value="{{post.title}}"></h5> --}}
+     <h5 class="card-title"><input name="post-title" class="form-control form-control-lg" type="text" style="min-width: 100%" value="{{post.title}}"></h5>
       </div>
       <div class="card-body">
         <textarea class="visible-xs" rows="6" id="text-box-content" name="post-url" type="text" style="min-width: 100%">{{post.content}}</textarea>
@@ -16,7 +17,6 @@
   <button type="button" id="delete-post-btn" class="btn btn-danger">Delete post</button>
   </form>
 </article>
-
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
 <script src="/javascript/comment.js"></script>
