@@ -5,7 +5,12 @@
 *The what, why, and how:*<br>
 ❓ A full stack CMS style blog site that allows developers to publish articles, write blog posts and express general thoughts on the computer science industry, while using a simple and attractive UI.
 
-Below are GIFS that provide further reference:
+Below are screenshots that provide further reference:
+
+![SCREENSHOT_1](https://user-images.githubusercontent.com/84754257/141692060-88d54765-ff50-438e-b9b4-33d9b6a76d80.png)
+![SCREENSHOT_2](https://user-images.githubusercontent.com/84754257/141692073-4f9076cd-56aa-4fcd-89a2-f81e2ee4d562.png)
+![SCREENSHOT_3](https://user-images.githubusercontent.com/84754257/141692083-2678dac0-f862-454d-9404-b28df448397c.png)
+![SCREENSHOT_4](https://user-images.githubusercontent.com/84754257/141692090-fe98a547-7845-4989-8f7e-5659dc0787d2.png)
 
 ## Table of Contents
 
@@ -75,7 +80,8 @@ Also, thanks to my TA Mason who provided guidance on naviagting Bootstrap input 
 👐 This project adheres to standards set by the <a href = https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md>Contributor Covenant</a>.<br>
 Please consult this documentation before contributing to this project.
 
-## Questions
+# Questions
+#![Profile Pic](https://user-images.githubusercontent.com/84754257/141692108-9ff01b79-f396-45c4-9420-96f2898302af.jpg)
 If you have any questions regarding the development process of this application, or specific questions about contributing, feel free to reach me by email or on Github.
 * Email 📪 willdarkins@gmail.com
 * Github 🗿 [willdarkins](https://github.com/willdarkins) 
